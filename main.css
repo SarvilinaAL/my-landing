@@ -303,7 +303,7 @@ header {
       transform: rotate(360deg);
     }
   }
-  @media (min-width: 720px) and (max-width: 1279px) {
+  @media (max-width: 720px) {
     header {
       padding-left: 20px;
       padding-right: 20px;
