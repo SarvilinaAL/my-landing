@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Солнечные батареи GreenCorp</title>
   <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous" referrerpolicy="no-referrer">
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
@@ -20,6 +20,7 @@
     </div>
   </header>
   <section class="about">
+    <canvas class="orb-canvas" id="orb-canvas"></canvas>
     <div class="about__info animate__animated animate__fadeInLeft animate__slow">
       <h1>Солнечные панели GreenRobotic</h1>
       <p>Производите дешёвую экологически чистую электроэнергию из солнечного света</p>
@@ -38,22 +39,25 @@
         <div class="card__logo">
           <i class="fas fa-solar-panel" style="color:#ffb406"></i>
         </div>
-        <h3>Уменьшите счета за электричество</h3>        
-        <p>Используйте чистую солнечную энергию для питания своего дома: уменьшите зависимость от электросети и счета за электричество</p>
-      </div>      
+        <h3>Уменьшите счета за электричество</h3>
+        <p>Используйте чистую солнечную энергию для питания своего дома: уменьшите зависимость от электросети и счета за
+          электричество</p>
+      </div>
       <div class="card">
         <div class="card__logo">
           <i style="color:#ad1714">24/7</i>
         </div>
         <h3>Мониторинг электроэнергии</h3>
-        <p>Управляйте своей системой солнечных панелей из любой точки мира с помощью специального мобильного приложения</p>
+        <p>Управляйте своей системой солнечных панелей из любой точки мира с помощью специального мобильного приложения
+        </p>
       </div>
       <div class="card">
         <div class="card__logo">
           <i class="fas fa-chart-line" style="color:#22a030"></i>
         </div>
         <h3>Максимальная эффективность</h3>
-        <p>Солнечные панели GreenRobotic обеспечивают максимальное производство энергии круглый год, даже на крышах со сложными углами</p>
+        <p>Солнечные панели GreenRobotic обеспечивают максимальное производство энергии круглый год, даже на крышах со
+          сложными углами</p>
       </div>
     </div>
     <div class="features__border">
@@ -61,7 +65,8 @@
     <div class="features__feedback">
       <div class="features__feedback-left">
         <h2>Нам доверяет <br>5000+ счастливых клиентов</h2>
-        <p>Мы помогли тысячам людей перейти на зеленую энергию<br>После заказа мы позаботимся обо всем: доставка панелей, проект, установка, помощь в использовании</p>
+        <p>Мы помогли тысячам людей перейти на зеленую энергию<br>После заказа мы позаботимся обо всем: доставка
+          панелей, проект, установка, помощь в использовании</p>
       </div>
       <div class="features__feedback-right">
         <div class="features__box features__savings-box">
@@ -88,8 +93,10 @@
     <div class="promo__right">
       <div class="card__promo">
         <h2>Зарядите свой дом</h2>
-        <p><i class="fas fa-duotone fa-circle" style="color:#ec6b29"></i>Солнечные панели сертифицированы мировыми экспертами: система безопасна и надежна</p>
-        <p><i class="fas fa-duotone fa-circle" style="color:#ec6b29"></i>Следите за накоплением энергии вашего дома в режиме реального времени и настраивайте процент расхода и накопления энергии</p>
+        <p><i class="fas fa-duotone fa-circle" style="color:#ec6b29"></i>Солнечные панели сертифицированы мировыми
+          экспертами: система безопасна и надежна</p>
+        <p><i class="fas fa-duotone fa-circle" style="color:#ec6b29"></i>Следите за накоплением энергии вашего дома в
+          режиме реального времени и настраивайте процент расхода и накопления энергии</p>
         <div class="promo__button-wrap">
           <button type="button">Заказать
             <i class="fas fa-chevron-right"></i>
@@ -99,7 +106,7 @@
     </div>
   </section>
   <section class="form">
-    <div class="form-container">
+    <div class="form__container">
       <h1>Оставьте свои контакты</h1>
       <p>Поможем подобрать модель.<br>Выбрать удобный вариант доставки и установки.<br>Гарантия возврата денег.</p>
       <form>
@@ -109,15 +116,16 @@
         </div>
         <div class="form__group">
           <label for="email">Электронный адрес</label>
-          <input type="text" placeholder="***@yandex.ru" id="email">
+          <input type="email" placeholder="***@yandex.ru" id="email">
         </div>
         <div class="form__group">
           <label for="tel">Номер телефона</label>
-          <input type="text" placeholder="7(999)999-99-99" id="phone">
+          <input type="tel" placeholder="7 (999) 999-99-99" id="phone">
         </div>
         <div class="form__group">
           <label for="budget">Примерный бюджет</label>
           <select id="budget">
+            <option>Выберите вариант</option>
             <option value="10-30">10 000Р - 30 000Р</option>
             <option value="30-60">30 000Р - 60 000Р</option>
             <option value="60-100">60 000Р - 100 000Р</option>
@@ -154,6 +162,7 @@
     </div>
     <div class="footer__copyright">GreenCorp © 2021</div>
   </footer>
+  <script src="js/canvas.js"></script>
 </body>
 
 </html>
