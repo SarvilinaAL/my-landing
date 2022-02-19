@@ -1,4 +1,4 @@
-  body {
+    body {
     font-family: 'Raleway', sans-serif;
     color: #213053;
     margin: 0;
@@ -8,10 +8,17 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    position: sticky;
+    position: fixed;
     top: 0;
-    background: white;
+    background: none;
     z-index: 1;
+    left: 0;
+    right: 0;
+    transition: box-shadow, background-color .025s ease;
+  }
+  .header__scrolled {
+    background-color: white;
+    box-shadow: 0 12px 34px -11px rgb(65, 62, 101 / 10%);
   }
   .header__logo {
     height: 30px;
@@ -49,7 +56,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;  
-    padding-top: 115px;
+    padding-top: 200px;
     padding-bottom: 115px;
     background: url(img/back.png) no-repeat;
     background-position: center;

@@ -1,4 +1,3 @@
-//const COLORS = ["255,108,80", "5,117,18", "29,39,57", "67,189,81"];
 const COLORS = ["255,255,0", "0,255,0", "0,255,255", "255,255,255"];
 const BUBBLE_DENSITY = 100;
 
@@ -9,9 +8,7 @@ function generateDecimalBetween(left, right) {
 class Bubble {
     constructor(canvas) {
         this.canvas = canvas;
-
         this.getCanvasSize();
-
         this.init();
     }
 
@@ -34,7 +31,6 @@ class Bubble {
     move() {
         this.translateX = this.translateX - this.movementX;
         this.translateY = this.translateY - this.movementY;
-
         if (this.translateY < 0 || this.translateX < 0 || this.translateX > this.canvasWidth) {
             this.init();
             this.translateY = this.canvasHeight;
@@ -58,13 +54,11 @@ class CanvasBackground {
     canvasSize() {
         this.canvas.width = this.canvas.offsetWidth * this.dpr;
         this.canvas.height = this.canvas.offsetHeight * this.dpr;
-
         this.ctx.scale(this.dpr, this.dpr);
     }
 
     animate() {
         this.ctx.clearRect(0, 0, this.canvas.clientWidth, this.canvas.clientHeight);
-
         this.bubblesList.forEach((bubble) => {
             bubble.move();
             this.ctx.translate(bubble.translateX, bubble.translateY);
@@ -74,7 +68,6 @@ class CanvasBackground {
             this.ctx.fill();
             this.ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
         });
-
         requestAnimationFrame(this.animate.bind(this));
     }
 
